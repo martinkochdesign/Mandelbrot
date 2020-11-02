@@ -3,7 +3,7 @@
 
 
     var xrange = 2;
-    var yrange = 1.5;
+    var yrange = 2;
 
 function setup() {
        pixelDensity(1);
@@ -14,7 +14,7 @@ function setup() {
 function draw() {
     background(0);
     
-    var nmax = 100;
+    var nmax = 50;
     
     loadPixels();
     
@@ -32,24 +32,25 @@ function draw() {
                 
                 old_real = new_real;
                 old_imag = new_imag;
-                if (abs(new_real+new_imag)>32){
+                if (abs(new_real+new_imag)>100){
                 break;
                 }
             }
                     
             var index= (x + y * width)*4;        
-            pixels[index+0]=map(n,0,100,0,255); //R
-            pixels[index+1]=map(n,0,50,0,255); //G
-            pixels[index+2]=map(n,0,25,0,128); //B
+            pixels[index+0]=map(n,0,nmax,0,255); //R
+            pixels[index+1]=map(n,0,nmax/2,0,255); //G
+            pixels[index+2]=map(n,0,nmax/4,0,128); //B
             pixels[index+3]=255; //alpha 
     }
 }
     updatePixels();
     //xrange -= 1;
     //yrange -= 1;
-    noStroke();
+        noStroke();
     fill(255, 255, 255);
     textSize(10);
-    text("M. A. Koch, PhD. 2020", width-200, height-8);
+    text("M. A. Koch, PhD. 2020", width-115, height-8);
     noLoop();
+
 }
