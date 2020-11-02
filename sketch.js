@@ -47,5 +47,9 @@ function draw() {
     updatePixels();
     //xrange -= 1;
     //yrange -= 1;
+    noStroke();
+    fill(255, 255, 255);
+    textSize(10);
+    text("M. A. Koch, PhD. 2020", width-115, height-8);
     noLoop();
 }
