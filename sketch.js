@@ -7,7 +7,7 @@
 
 function setup() {
        pixelDensity(1);
-    createCanvas(windowWidth,windowHeight);
+    createCanvas(800,600);
 }
 
 
@@ -50,6 +50,6 @@ function draw() {
     noStroke();
     fill(255, 255, 255);
     textSize(10);
-    text("M. A. Koch, PhD. 2020", width-115, height-8);
+    text("M. A. Koch, PhD. 2020", width-200, height-8);
     noLoop();
 }
