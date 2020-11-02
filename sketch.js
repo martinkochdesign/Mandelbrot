@@ -7,7 +7,7 @@
 
 function setup() {
        pixelDensity(1);
-    createCanvas(displayWidth,displayHeight);
+    createCanvas(windowWidth,windowHeight);
 }
 
 
